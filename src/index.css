@@ -6,3 +6,40 @@ body {
   max-width: 38rem;
   padding: 2rem;
 }
+
+h1 {
+  margin-bottom: 1.5rem;
+  color: #333;
+}
+
+button {
+  background-color: #0078d4;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  margin: 5px;
+  border-radius: 4px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+button:hover {
+  background-color: #005a9e;
+}
+
+button:active {
+  background-color: #004578;
+}
+
+#select-button {
+  background-color: #28a745;
+}
+
+#select-button:hover {
+  background-color: #218838;
+}
+
+#select-button:active {
+  background-color: #1e7e34;
+}
