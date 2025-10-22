@@ -14,7 +14,7 @@ Some integrated features include an adjustable words per minute pace (WPM), visu
 
 This app aims to assist readers who typically have trouble keeping track of where they are up to when reading traditional paragraphs or want to consume text based content quickly. This approach reduces cognitive load and eye strain, making digital content more accessible for users with reading difficulties, dyslexia, ADHD, or visual processing challenges.
 
-#### Usage
+Usage
 -----
 
 Install dependencies by navigating to the app folder in the terminal and running:
@@ -29,7 +29,7 @@ Start the app by running:
 npm start
 ```
 
-#### Software Architecture
+Software Architecture
 -----
 
 This application is built using Electron to make use of its desktop application capabilities. It is designed to
