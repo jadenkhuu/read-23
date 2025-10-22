@@ -3,10 +3,10 @@
 *Team: [Jaden Khuu]*
 *Status: Draft*
 *Last Updated: 22/10/2025*
-_____
+-----
 
 #### Description
-_____
+-----
 
 read-23 is an application which aims to address the challenge of visual tracking in traditional paragraph and text formatting to assist users in reading and comprehension. Building upon an existing prototype, the app will iterating through each word in a sentence, displaying them sequentially at a centralised position, increasing the users ability to read words quickly.
 
@@ -15,7 +15,7 @@ Some integrated features include an adjustable words per minute pace (WPM), visu
 This app aims to assist readers who typically have trouble keeping track of where they are up to when reading traditional paragraphs or want to consume text based content quickly. This approach reduces cognitive load and eye strain, making digital content more accessible for users with reading difficulties, dyslexia, ADHD, or visual processing challenges.
 
 #### Usage
-_____
+-----
 
 Install dependencies by navigating to the app folder in the terminal and running:
 
@@ -30,6 +30,6 @@ npm start
 ```
 
 #### Software Architecture
-_____
+-----
 
 This application is built using Electron to make use of its desktop application capabilities. It is designed to
