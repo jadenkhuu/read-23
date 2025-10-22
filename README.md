@@ -5,7 +5,7 @@
 *Last Updated: 22/10/2025*
 -----
 
-#### Description
+Description
 -----
 
 read-23 is an application which aims to address the challenge of visual tracking in traditional paragraph and text formatting to assist users in reading and comprehension. Building upon an existing prototype, the app will iterating through each word in a sentence, displaying them sequentially at a centralised position, increasing the users ability to read words quickly.
