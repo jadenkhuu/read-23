@@ -22,7 +22,7 @@ selectButton.addEventListener('click', () => {
 window.electronAPI.onSelectionStored((coordinates) => {
   isSelected = true;
   selectionCoordinates = coordinates;
-  selectButton.textContent = 'Clear Selection';
+  selectButton.textContent = 'clear selection';
 
   console.log('Selection stored:', coordinates);
   // TODO: Enable play/pause and next buttons once selection is made
@@ -32,7 +32,7 @@ window.electronAPI.onSelectionStored((coordinates) => {
 window.electronAPI.onSelectionCleared(() => {
   isSelected = false;
   selectionCoordinates = null;
-  selectButton.textContent = 'Select';
+  selectButton.textContent = 'select';
 
   console.log('Selection cleared');
   // TODO: Disable play/pause and next buttons when no selection
@@ -47,4 +47,11 @@ playPauseButton.addEventListener('click', () => {
 nextButton.addEventListener('click', () => {
   console.log('Next clicked');
   // TODO: Implement next functionality
+});
+
+// ESC key handler to clear selection
+document.addEventListener('keydown', (e) => {
+  if (e.key === 'Escape' && isSelected) {
+    window.electronAPI.clearSelection();
+  }
 });

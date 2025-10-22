@@ -9,6 +9,7 @@ if (require('electron-squirrel-startup')) {
 // Store references to windows
 let mainWindow;
 let overlayWindow = null;
+let borderWindow = null;
 
 // Store selection state
 let selectionState = {
@@ -67,6 +68,44 @@ function createOverlayWindow() {
   // overlayWindow.webContents.openDevTools();
 }
 
+// Create border window to show the selection
+function createBorderWindow(coordinates) {
+  // Close existing border window if any
+  if (borderWindow) {
+    borderWindow.close();
+  }
+
+  borderWindow = new BrowserWindow({
+    x: coordinates.x,
+    y: coordinates.y,
+    width: coordinates.width,
+    height: coordinates.height,
+    frame: false,
+    transparent: true,
+    alwaysOnTop: true,
+    skipTaskbar: true,
+    resizable: false,
+    focusable: false,
+    webPreferences: {
+      nodeIntegration: false,
+      contextIsolation: true,
+    },
+  });
+
+  // Make the window click-through
+  borderWindow.setIgnoreMouseEvents(true);
+
+  borderWindow.loadFile(path.join(__dirname, 'border.html'));
+
+  // Handle border window close
+  borderWindow.on('closed', () => {
+    borderWindow = null;
+  });
+
+  // Optional: Open DevTools for debugging border
+  // borderWindow.webContents.openDevTools();
+}
+
 // IPC Handlers
 
 // Handle start selection request
@@ -87,6 +126,12 @@ ipcMain.on('selection-complete', (event, coordinates) => {
   if (overlayWindow) {
     overlayWindow.close();
   }
+
+  // Create border window to show the selection
+  createBorderWindow(coordinates);
+
+  // Ensure border window stays on top
+  mainWindow.setAlwaysOnTop(true, 'floating');
 
   // Notify main window
   mainWindow.webContents.send('selection-stored', coordinates);
@@ -109,6 +154,13 @@ ipcMain.on('clear-selection', () => {
   // Clear stored coordinates
   selectionState.isSelected = false;
   selectionState.coordinates = null;
+
+  // Close border window
+  if (borderWindow) {
+    borderWindow.close();
+  }
+
+  mainWindow.setAlwaysOnTop(true);
 
   // Notify main window
   mainWindow.webContents.send('selection-cleared');
