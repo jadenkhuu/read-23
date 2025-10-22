@@ -1,9 +1,9 @@
 read-23
 -----
 
-*Team: [Jaden Khuu]*  
-*Status: Draft*  
-*Last Updated: 22/10/2025*  
+*Team: [Jaden Khuu]*
+*Status: Draft*
+*Last Updated: 22/10/2025*
 
 Description
 -----
@@ -17,7 +17,9 @@ This app aims to assist readers who typically have trouble keeping track of wher
 Usage
 -----
 
-Install dependencies by navigating to the app folder in the terminal and running:
+##### Installation
+
+To begin, install dependencies by navigating to the app folder in the terminal and running:
 
 ```
 npm install
@@ -29,7 +31,18 @@ Start the app by running:
 npm start
 ```
 
+##### How to use
+
+1. Run read-23
+2. Click "select" to select an area of your screen to scan for text
+3. Click and drag to make a selection
+4.
+
 Software Architecture
 -----
 
-This application is built using Electron to make use of its desktop application capabilities. It is designed to
+This application is built using Electron to make use of its desktop application capabilities. It also utilises system level APIs for screen capturing and OCR processing (for non-plaintext inputs). This tech stack allows for lightweight architecture, prioritising speed and efficient development of future features.
+
+#### Core functionality
+
+1.
