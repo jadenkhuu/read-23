@@ -53,12 +53,6 @@ First, familiarise yourself with the control buttons section locate at the lower
   - The main use of this is to streamline the user experience
   - Eg. suppose the user is reading a page of a PDF and they have made a selection on screen. They scroll down to the next page to continue reading. Instead of reselecting the exact same area, the user can recycle the existing selection and click refresh to scan for new text.
 
-Troubleshooting
------
-
-In order for the line highlighting to be accurate, ensure your 'Scale' in display settings is the default 100%
-- If the text highlighting does not align with the text or follow the lines properly, that is likely why
-
 Typical user flow
 -----
 
@@ -72,6 +66,15 @@ Typical user flow
    - Advance to the next paragraph by pressing **'ArrowRight'** or clicking the **'next button'**
    - Press **'Spacebar'** or click **'play button'** to replay the paragraph and read again
    - Or, if you have finished reading the page, navigate to new content and reuse the existing selection with **'refresh button'**
+
+
+Troubleshooting
+-----
+
+In order for the line highlighting to be accurate, ensure your 'Scale' in display settings is the default 100%
+- If the text highlighting does not align with the text or follow the lines properly, that is likely why
+
+<img width="1061" height="283" alt="image" src="https://github.com/user-attachments/assets/24da1686-d171-4bd1-b1cc-bb18589479bf" />
 
 Functions and Features in depth
 -----
