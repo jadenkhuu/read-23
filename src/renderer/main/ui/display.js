@@ -17,13 +17,13 @@ function displayWord(word, prevWord = null, nextWord = null) {
   const container = document.createElement('div');
   container.className = 'word-context-container';
 
-  // Previous word (if exists)
-  if (prevWord) {
-    const prevElement = document.createElement('div');
-    prevElement.className = 'word-previous';
-    prevElement.textContent = prevWord.text;
-    container.appendChild(prevElement);
-  }
+  // // Previous word (if exists)
+  // if (prevWord) {
+  //   const prevElement = document.createElement('div');
+  //   prevElement.className = 'word-previous';
+  //   prevElement.textContent = prevWord.text;
+  //   container.appendChild(prevElement);
+  // }
 
   // Current word (main focus)
   const currentElement = document.createElement('div');
@@ -32,12 +32,12 @@ function displayWord(word, prevWord = null, nextWord = null) {
   container.appendChild(currentElement);
 
   // Next word (if exists)
-  if (nextWord) {
-    const nextElement = document.createElement('div');
-    nextElement.className = 'word-next';
-    nextElement.textContent = nextWord.text;
-    container.appendChild(nextElement);
-  }
+  // if (nextWord) {
+  //   const nextElement = document.createElement('div');
+  //   nextElement.className = 'word-next';
+  //   nextElement.textContent = nextWord.text;
+  //   container.appendChild(nextElement);
+  // }
 
   displayText.appendChild(container);
 
