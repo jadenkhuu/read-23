@@ -3,9 +3,7 @@ reader-23
 
 *Team: [Jaden Khuu]*
 
-*Status: Version 1.1*
-
-*Last Updated: 18/12/2025*
+*Status: Version 1.2*
 
 Description
 -----
@@ -21,6 +19,15 @@ The application is intended to be used as a floating helper, sitting beside the 
 </div>
 
 This app aims to assist users who typically have trouble keeping track of their reading progress with traditional formatted paragraphs. This app can also help readers who want to consume text-based content more quickly and efficiently. This approach reduces cognitive load and eye strain, making digital content more accessible for users who may have reading difficulties, dyslexia, ADHD, or visual processing challenges. 
+
+UPDATE
+-----
+The main user interface now only shows one word at a time, not the next and previous. Guidelines have also made to the screen to improve ease of use.
+
+<div align="center">
+  <img width="1495" height="1073" alt="reader23 update" src="https://github.com/user-attachments/assets/ddf2831c-1479-45a7-a925-cb3264815420" />  
+</div>
+  
 
 Installation
 -----
